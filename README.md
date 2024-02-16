@@ -6,7 +6,7 @@
 
 - 📫 Reach me at: **bangera.diya@gmail.com**
 
-- ⚡ Fun fact: **I play guitar, I love reading (mainly dark or romantic fiction) and have recently developed an unhealthy obsession with building legos. I also have a cat, his name's Leo. I also sketch**
+- ⚡ Fun fact: **I play guitar, I love reading (mainly dark or romantic fiction) and have recently developed an unhealthy obsession with building legos. I also have a cat, his name's Leo. I also sketch, paint and am into digital art as well.**
 
 
 <h3 align="center">Connect with me:</h3>
