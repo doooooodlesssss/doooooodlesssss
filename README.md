@@ -1,12 +1,12 @@
 <h1 align="center">Hi 👋, I'm Diya Bangera</h1>
-<h3 align="center">A student, eager to dive into the tech world</h3>
-<h4 align="center">I am pursuing engineering in Computer Science with a specialisation is Artificial Intelligence from Netaji Subhas University of Technology</h4>
+<h3 align="center">A freshman eager to learn new things and explore</h3>
+<h4 align="center">I am pursuing engineering in Computer Science with a specialisation is Artificial Intelligence from Netaji Subhas University of Technology in Delhi, India</h4>
 
-- 🌱 I’m currently learning **Data Structures and Algorithms. I have also started my journey with web development and will be pushing my projects here soon.**
+- 🌱 I’m currently learning **Data Structures and Algorithms in C++. I have also just started my journey with web development and have found it really interesting till now.**
 
 - 📫 Reach me at: **bangera.diya@gmail.com**
 
-- ⚡ Fun fact: **I play guitar, I love reading and have recently developed an unhealthy obsession with building legos. I also have a cat, his name's Leo.**
+- ⚡ Fun fact: **I play guitar, I love reading (mainly dark or romantic fiction) and have recently developed an unhealthy obsession with building legos. I also have a cat, his name's Leo. I also sketch**
 
 
 <h3 align="left">Connect with me:</h3>
