@@ -3,11 +3,7 @@
 <h4 align="center">I am pursuing engineering in Computer Science with a specialisation is Artificial Intelligence from Netaji Subhas University of Technology in Delhi, India</h4>
 
 - 🌱 I’m currently learning **Data Structures and Algorithms in C++. I have also just started my journey with web development and have found it really interesting till now.**
-
 - 📫 Reach me at: **bangera.diya@gmail.com**
-
-- ⚡ Fun fact: **I play guitar, I love reading (mainly dark or romantic fiction) and have recently developed an unhealthy obsession with building legos. I also have a cat, his name's Leo. I also sketch, paint and am into digital art as well.**
-
 
 <h3 align="center">Connect with me:</h3>
 <p align="center">
