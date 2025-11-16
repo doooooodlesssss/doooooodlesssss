@@ -1,8 +1,8 @@
 <h1 align="center">Hi 👋, I'm Diya Bangera</h1>
-<h3 align="center">A comp sci junior eager to learn new things and explore</h3>
+<h3 align="center">A computer science junior eager to learn new things and explore</h3>
 <h4 align="center">I am pursuing engineering in Computer Science with a specialisation is Artificial Intelligence from Netaji Subhas University of Technology in Delhi, India</h4>
 
-- 🌱 I’m currently learning **Data Structures and Algorithms in C++. I have also just started my journey with web development and have found it really interesting till now.**
+- 🌱 I am a MERN Developer with a good grasp at ML and have worked on multiple projects in different domains. I’m also proficient in Data Structures and Algorithms in C++ (> Java) **
 - 📫 Reach me at: **bangera.diya@gmail.com**
 
 <!-- <p align="center">
