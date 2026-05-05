@@ -1,7 +1,7 @@
 <a href="https://github.com/doooooodlesssss/doooooodlesssss">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/doooooodlesssss/doooooodlesssss/main/dark_mode.svg">
-    <img alt="Diya Bangera's GitHub Profile README" src="">
+    <img alt="Diya Bangera's GitHub Profile README" src="https://raw.githubusercontent.com/doooooodlesssss/doooooodlesssss/main/light_mode.svg">
   </picture>
 </a>
 
