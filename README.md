@@ -7,40 +7,6 @@
 
 
 
-## Skill Set:
-
-<table><tr><td valign="top" width="25%">
-
-### Frontend  
-<a href="https://github.com/tayyabadev">
-<div align="center">  
-       <img src="https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,js&perline=4" /> 
-</div>
-</a>
- </td><td valign="top" width="25%">
-        
-### Languages
-<a href="https://github.com/tayyabadev">
-<div align="center">
-       <img src="https://skillicons.dev/icons?i=c,js,cpp,java,python,&perline=4" /> 
-</div>
-</a>
-
-</td><td valign="top" width="25%">
-  
-### Others
-<a href="https://github.com/tayyabadev">
-<div align="center">
-       <img src="https://skillicons.dev/icons?i=git,github,npm,figma,vscode,vercel,discord,vscodeqt&perline=4" /> 
-</div>
-</a>
-</td>
-</tr></table>
-
-
-
-
-
 
 <!-- <h1 align="center">Hi 👋, I'm Diya Bangera</h1>
 <h3 align="center">A computer science junior eager to learn new things and explore</h3>
