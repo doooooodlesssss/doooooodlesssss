@@ -1,9 +1,10 @@
-<a href="https://github.com/doooooodlesssss/doooooodlesssss">
+<a href="https://github.com/doooooodlesssss">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/doooooodlesssss/doooooodlesssss/main/dark_mode.svg">
     <img alt="Diya Bangera's GitHub Profile README" src="https://raw.githubusercontent.com/doooooodlesssss/doooooodlesssss/main/light_mode.svg">
   </picture>
 </a>
+
 
 
 ## Skill Set:
