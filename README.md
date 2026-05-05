@@ -1,7 +1,7 @@
-<a href="https://github.com/Andrew6rant/Andrew6rant">
+<a href="https://github.com/doooooodlesssss/doooooodlesssss">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="">
-    <img alt="Andrew Grant's GitHub Profile README" src="">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/doooooodlesssss/doooooodlesssss/main/dark_mode.svg">
+    <img alt="Diya Bangera's GitHub Profile README" src="">
   </picture>
 </a>
 
