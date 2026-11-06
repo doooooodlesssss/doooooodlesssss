@@ -212,25 +212,20 @@ def loc_query(owner_affiliation, comment_size=0, force_cache=False, cursor=None,
 
 
 def cache_builder(edges, comment_size, force_cache, cursor, has_next_page, total_edges):
-    """
-    Builds a cache file of all repositories and their commit counts
-    """
     total_edges += edges
     if has_next_page:
         return loc_query(['OWNER', 'COLLABORATOR', 'ORGANIZATION_MEMBER'], comment_size, force_cache, cursor, total_edges)
-    else:
-        filename = 'cache/'+hashlib.sha256(USER_NAME.encode('utf-8')).hexdigest()+'.txt'
-        try:
-            with open(filename, 'r') as f:
-                data = f.readlines()
-            cache_comment = data[:comment_size]
-            data = data[comment_size:]
-            if not force_cache:
-                data, cache_comment = validate_cache(data, cache_comment, total_edges)
-        except FileNotFoundError:
-            data = []
-            cache_comment = []
-        return add_loc_to_cache(data, cache_comment, total_edges, filename)
+    os.makedirs('cache', exist_ok=True)
+    filename = 'cache/' + hashlib.sha256(USER_NAME.encode('utf-8')).hexdigest() + '.txt'
+    try:
+        with open(filename, 'r') as f:
+            lines = f.readlines()
+        cache_comment = lines[:comment_size]
+        data = lines[comment_size:]
+    except FileNotFoundError:
+        cache_comment = ['# repo added deleted my_commits total_commits\n'] + ['#\n'] * (comment_size - 1)
+        data = []
+    return add_loc_to_cache(data, cache_comment, total_edges, filename)
 
 
 def validate_cache(data, cache_comment, edges):
@@ -246,31 +241,30 @@ def validate_cache(data, cache_comment, edges):
 
 
 def add_loc_to_cache(data, cache_comment, edges, filename):
-    """
-    Adds LOC data to cache for any repos not already cached
-    """
-    added_loc, deleted_loc, added_commits, contributed_repos = 0, 0, 0, 0
+    cached = {l.split()[0]: l.split() for l in data if l.strip()}
+    new_data = []
+    added_loc = deleted_loc = added_commits = repos = 0
     for edge in edges:
-        repo = edge['node']['nameWithOwner']
+        node = edge['node']
+        repo = node['nameWithOwner']
         owner, repo_name = repo.split('/')
-        if [line for line in data if line.split()[0] == repo]:
-            for line in data:
-                if line.split()[0] == repo:
-                    added_loc += int(line.split()[1])
-                    deleted_loc += int(line.split()[2])
-                    added_commits += int(line.split()[3]) if len(line.split()) > 3 else 0
+        branch = node['defaultBranchRef']
+        total = branch['target']['history']['totalCount'] if branch else 0
+        row = cached.get(repo)
+        if row and len(row) > 4 and int(row[4]) == total:
+            add, dele, mine = int(row[1]), int(row[2]), int(row[3])
         else:
-            result = recursive_loc(owner, repo_name, data, cache_comment)
-            if result:
-                added_loc += result[0]
-                deleted_loc += result[1]
-                added_commits += result[2]
-                data.append(f'{repo} {result[0]} {result[1]} {result[2]}\n')
-        contributed_repos += 1
+            res = recursive_loc(owner, repo_name, new_data, cache_comment)
+            add, dele, mine = res if res else (0, 0, 0)
+        new_data.append(f'{repo} {add} {dele} {mine} {total}\n')
+        added_loc += add
+        deleted_loc += dele
+        added_commits += mine
+        repos += 1
     with open(filename, 'w') as f:
         f.writelines(cache_comment)
-        f.writelines(data)
-    return [added_loc, deleted_loc, added_loc - deleted_loc, added_commits, contributed_repos]
+        f.writelines(new_data)
+    return [added_loc, deleted_loc, added_loc - deleted_loc, added_commits, repos]
 
 
 def force_close_file(data, cache_comment):
@@ -337,19 +331,10 @@ def find_and_replace(root, element_id, new_text):
 
 
 def commit_counter(comment_size):
-    """
-    Counts up my total commits, using the cache file created by cache_builder.
-    """
-    total_commits = 0
-    filename = 'cache/'+hashlib.sha256(USER_NAME.encode('utf-8')).hexdigest()+'.txt'
+    filename = 'cache/' + hashlib.sha256(USER_NAME.encode('utf-8')).hexdigest() + '.txt'
     with open(filename, 'r') as f:
-        data = f.readlines()
-    cache_comment = data[:comment_size]
-    data = data[comment_size:]
-    for line in data:
-        total_commits += int(line.split()[2])
-    return total_commits
-
+        lines = f.readlines()[comment_size:]
+    return sum(int(l.split()[3]) for l in lines if l.strip())
 
 def user_getter(username):
     """
