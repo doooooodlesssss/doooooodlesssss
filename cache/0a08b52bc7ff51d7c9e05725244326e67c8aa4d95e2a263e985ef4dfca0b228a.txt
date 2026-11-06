@@ -1,0 +1,29 @@
+# repo added deleted my_commits total_commits
+#
+#
+#
+#
+#
+#
+doooooodlesssss/doooooodlesssss 1203 531 41 41
+doooooodlesssss/Coffee-Date 2291 24 5 5
+doooooodlesssss/Amazon-Clone 3950 47 6 6
+doooooodlesssss/Durgastra 7110989 85 4 4
+doooooodlesssss/Portfolio-Website 1416624 651 21 21
+doooooodlesssss/Face-Mask-Detection-using-Deep-CNN 10783 5372 6 6
+doooooodlesssss/Mental-Health-Chatbot 0 0 0 0
+doooooodlesssss/Spider-Monkey-Optimisation 1266 5 31 31
+doooooodlesssss/migration 3883609 10 5 5
+doooooodlesssss/RefugeeRoutes 13725 0 1 1
+kapish19/Focusly 0 0 0 5
+doooooodlesssss/Spectral-Dual-Attention-Captioning 18404 2024 32 32
+doooooodlesssss/building-health-monitor 0 0 0 0
+doooooodlesssss/vibration-monitor 1010 37 4 4
+doooooodlesssss/diya-portfolio 4251 197 21 21
+rana05rishit23/IndianLPP 0 0 0 1
+kapish19/PlantBrain 0 0 0 1
+rana05rishit23/Clip-ReID 0 0 0 1
+doooooodlesssss/rentok-llm-gateway 825 1 2 2
+doooooodlesssss/btp-base-paper 3538 183 1 12
+doooooodlesssss/btp- 3648 445 2 13
+doooooodlesssss/amazonn 1 0 1 1
