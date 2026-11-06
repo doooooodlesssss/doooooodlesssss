@@ -98,6 +98,8 @@ def graph_repos_stars(count_type, owner_affiliation, cursor=None, add_loc=0, del
     }'''
     variables = {'owner_affiliation': owner_affiliation, 'login': USER_NAME, 'cursor': cursor}
     request = simple_request(graph_repos_stars.__name__, query, variables)
+    if 'errors' in request.json():
+        print(request.json()['errors'])
     if request.status_code == 200:
         if count_type == 'repos':
             return request.json()['data']['user']['repositories']['totalCount']
@@ -246,6 +248,8 @@ def add_loc_to_cache(data, cache_comment, edges, filename):
     added_loc = deleted_loc = added_commits = repos = 0
     for edge in edges:
         node = edge['node']
+        if not node:
+            continue
         repo = node['nameWithOwner']
         owner, repo_name = repo.split('/')
         branch = node['defaultBranchRef']
@@ -279,11 +283,11 @@ def force_close_file(data, cache_comment):
 
 
 def stars_counter(data):
-    """
-    Count total stars in repositories owned by me
-    """
     total_stars = 0
-    for node in data: total_stars += node['node']['stargazers']['totalCount']
+    for edge in data:
+        node = edge.get('node')
+        if node:
+            total_stars += node['stargazers']['totalCount']
     return total_stars
 
 
